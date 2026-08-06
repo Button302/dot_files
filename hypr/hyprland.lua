@@ -150,11 +150,11 @@ hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 }
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 
 -- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("easy", { type = "spring", mass = 1, stiffness = 300, dampening = 20 })
 
-hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
+hl.animation({ leaf = "global", enabled = true, speed = 1.5, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 4.79, spring = "easy" })
+hl.animation({ leaf = "windows", enabled = true, speed = 0.11, spring = "easy" })
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, spring = "easy", style = "slide" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "gnomed" })
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
@@ -228,12 +228,11 @@ hl.config({
 
 hl.config({
   input = {
-    kb_layout    = "us",
-    kb_variant   = "",
+    kb_layout    = "us,us",
+    kb_variant   = "colemak_dh_ortho,basic",
     kb_model     = "",
-    kb_options   = "",
     kb_rules     = "",
-    kb_options   = "caps:escape",
+    kb_options   = "caps:escape,grp:alt_shift_toggle",
 
     follow_mouse = 1,
 
