@@ -229,10 +229,10 @@ hl.config({
 hl.config({
   input = {
     kb_layout    = "us,us",
-    kb_variant   = "colemak_dh_ortho,basic",
+    kb_variant   = "basic,colemak_dh_ortho",
     kb_model     = "",
     kb_rules     = "",
-    kb_options   = "caps:escape,grp:alt_shift_toggle",
+    kb_options   = "grp:alt_shift_toggle",
 
     follow_mouse = 1,
 
@@ -268,8 +268,8 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + return ", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
-hl.bind(mainMod .. " + M",
-  hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+--hl.bind(mainMod .. " + M",
+-- hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))

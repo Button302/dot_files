@@ -31,6 +31,7 @@ return {
         },
         html = {},
         cssls = {},
+        qmlls = {},
         ts_ls = {
           on_attach = function(client, bufnr)
             if client:supports_method("workspace/diagnostic", bufnr) then
@@ -50,6 +51,7 @@ return {
           "basedpyright",
           "html",
           "cssls",
+          "qmlls",
           "ts_ls",
           "lua_ls",
         },
